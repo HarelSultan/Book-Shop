@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: cornflowerblue;
+    overflow-x: hidden;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-filter {
+    height: 40px;
+    display: flex;
+    gap: 1%;
+    margin-bottom: 20px;
+}
+
+.search-filter {
+    height: 100%;
+}
+
+.main-content {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.app-functions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add-btn {
+    background: rgb(34, 188, 17);
+    height: 49px;
+    color: whitesmoke;
+}
+
+.add-book-modal {
+    position: absolute;
+    height: 30%;
+    background: rgb(40, 38, 38);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 150%;
+    top: 5%;
+}
+
+.add-book-modal.open {
+    right: 81%;
+    transition: right 0.5s;
+}
+
+.close-add-modal {
+    position: absolute;
+    background: none;
+    left: 0;
+}
+
+.add-input {
+    margin-top: 25%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead th {
+    font-weight: 500;
+}
+
+td,
+th {
+    border: 1px rgb(40, 38, 38) solid;
+    text-align: center;
+    padding: 2px;
+}
+
+tr {
+    height: 100px;
+}
+
+.title-td {
+    width: 200px;
+}
+
+.btns-td {
+    width: 300px;
+}
+
+.book-id-td,
+.price-td,
+.rating-td {
+    width: 100px;
+}
+
+
+button {
+    color: whitesmoke;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.read-btn {
+    background: rgb(35, 35, 231);
+}
+
+.update-btn {
+    background: rgb(227, 196, 44);
+}
+
+.delete-btn {
+    background: rgb(224, 13, 13);
+}
+
+.read-modal {
+    position: absolute;
+    width: 18%;
+    height: 30%;
+    background: rgb(40, 38, 38);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+    left: 150%;
+    top: 5%;
+}
+
+.read-modal.open {
+    left: 81%;
+    transition: left .5s;
+}
+
+.book-title {
+    margin-top: 5%;
+}
+
+.update-rating-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.increase-rating-btn {
+    background: rgb(34, 188, 17);
+}
+
+.decrease-rating-btn {
+    background: rgb(224, 13, 13);
+}
+
+.done-btn {
+    background: rgb(150, 146, 146);
+    position: absolute;
+    bottom: 5px;
+}
+
+.paging-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paging-container button {
+    background: rgb(40, 38, 38);
+}
+
+.prev-page-btn {
+    opacity: 0;
+}
+
+.done-price-btn {
+    background: rgb(40, 38, 38);
+}
+
+.radio-btn {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-radio {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio-radio::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgb(224, 13, 13);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio-input:checked+.radio-radio::after {
+    transform: scale(1);
+}
+
+input,
+select {
+    background: rgb(40, 38, 38);
+    color: whitesmoke;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-preview {
+    background: rgb(40, 38, 38);
+    color: whitesmoke;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center space-evenly;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+}
